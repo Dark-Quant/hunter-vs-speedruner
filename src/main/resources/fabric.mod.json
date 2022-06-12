@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "speedhunt",
   "version": "${version}",
 
   "name": "Speedruner vs hunter utils",
@@ -9,12 +9,10 @@
     "Quantum_Emperor"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Dark-Quant/hunter-vs-speedruner"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/speedhunt/icon.png",
+  "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
