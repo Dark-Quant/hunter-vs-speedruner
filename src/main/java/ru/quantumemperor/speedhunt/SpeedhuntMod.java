@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.quantumemperor.speedhunt.item.ModItems;
+import ru.quantumemperor.speedhunt.config.ModConfig;
 
 public class SpeedhuntMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -14,6 +15,8 @@ public class SpeedhuntMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfig.registerConfig();
+
 		ModItems.registerItems();
 	}
 }

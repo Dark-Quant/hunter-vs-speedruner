@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.poi.PointOfInterestType;
 import org.slf4j.Logger;
 import ru.quantumemperor.speedhunt.SpeedhuntMod;
+import ru.quantumemperor.speedhunt.config.ModConfig;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -49,7 +50,7 @@ public class HuntersCompass extends Item {
         world.getPlayers().forEach(player -> {
             if(player.getGameProfile().getName().equalsIgnoreCase(name)) {
                 writeNbt(world.getRegistryKey(), player.getBlockPos(), stack.getOrCreateNbt());
-                user.getItemCooldownManager().set(this, 20*60*2);
+                user.getItemCooldownManager().set(this, 20 * ModConfig.COOLDOWN_OF_COMPASS);
             }
         });
         if(!stack.getOrCreateNbt().contains(PLAYER_TRACKED_KEY)){
